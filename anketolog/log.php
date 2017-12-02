@@ -39,15 +39,7 @@ $logger->addLogger(new OurLogger\FileLogger([
     ],
 ]));
 
-//
-//$logger->log(OurLogger\LogLevel::ERROR,'Error message'); //trouble with this
-//
-//$logger->log(OurLogger\LogLevel::INFO, 'Info message');
 
-
-
-
-//$logger->error('Error message');
 /**
  * Логгер который все debug логи записывает в syslog
  *
@@ -79,6 +71,5 @@ $logger->notice('Notice message');
 $fileLogger->log(OurLogger\LogLevel::INFO, 'Info message from FileLogger');
 $fileLogger->info('Info message from FileLogger');
 
-//
 
 
