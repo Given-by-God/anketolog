@@ -8,6 +8,11 @@
 
 namespace OurLogger;
 
+/**Логгер, который все debug логи записывает в syslog
+ *
+ * Class SyslogLogger
+ * @package OurLogger
+ */
 
 class SyslogLogger
 {

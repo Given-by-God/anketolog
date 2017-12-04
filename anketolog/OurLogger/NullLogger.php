@@ -9,6 +9,11 @@
 namespace OurLogger;
 
 
+/**Логгер,который ничего не делает
+ *
+ * Class NullLogger
+ * @package OurLogger
+ */
 class NullLogger
 {
     function __construct()

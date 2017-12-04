@@ -2,7 +2,7 @@
 
 namespace OurLogger;
 
-/**
+/**Класс для распределения логов
  *
  * Class Component
  * @package OurLogger
@@ -40,9 +40,9 @@ class Component extends LogLevel
             if ($level == $this->fileLogger[$i]->filename['levels'][0]) {   //в какой лог будем записывать
 
 
-                echo "<pre>";
-                print_r($this->fileLogger[$i]);
-                echo "</pre>";
+//                echo "<pre>";
+//                print_r($this->fileLogger[$i]);
+//                echo "</pre>";
 
                 switch ($this->fileLogger[$i]->filename['levels'][0]) {
                     case LogLevel::ERROR :

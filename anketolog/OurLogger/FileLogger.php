@@ -3,6 +3,12 @@
 namespace OurLogger;
 
 
+/**Класс для записи логов
+ *
+ * Class FileLogger
+ * @package OurLogger
+ */
+
 class FileLogger
 {
 
@@ -64,9 +70,7 @@ class FileLogger
     }
 
 
-    /**Дабы избежать повторения кода - вынес все в отдельный метод
-     * 
-     * 
+    /**Дабы избежать повторения кода - работа с файлами вынесена в отдельный метод
      * 
      * @param $level
      * @param $message

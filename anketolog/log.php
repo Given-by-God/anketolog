@@ -72,4 +72,4 @@ $fileLogger->log(OurLogger\LogLevel::INFO, 'Info message from FileLogger');
 $fileLogger->info('Info message from FileLogger');
 
 
-
+echo "it's work!!!";
