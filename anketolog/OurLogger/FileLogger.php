@@ -34,18 +34,7 @@ class FileLogger
 
     function ApplicationLog($level, $message)
     {
-        /*
-         * Создание файла
-         * $this->filename['filename'] - указывает путь к файлу
-         * a - только для записи.Записывает данные и ставит каретку в конце строки
-         */
-
-        $handle = fopen($this->filename['filename'], 'a');
-
-
-
-        fwrite($handle, "\r\n".$this->date." ".$level." ".$message);//Запись
-        fclose($handle);//Закрываем файл (считаеся хорошим тоном)
+        $this->addInfoToFile($level, $message);
     }
 
     /**
@@ -58,11 +47,7 @@ class FileLogger
 
     function ApplicationErrorLog($level, $message)
     {
-
-        $handle = fopen($this->filename['filename'], 'a');
-
-        fwrite($handle, "\r\n".$this->date." ".$level." ".$message);
-        fclose($handle);
+        $this->addInfoToFile($level, $message);
     }
 
     /**
@@ -75,10 +60,30 @@ class FileLogger
     function ApplicationInfoLog($level, $message)
     {
 
+        $this->addInfoToFile($level, $message);
+    }
+
+
+    /**Дабы избежать повторения кода - вынес все в отдельный метод
+     * 
+     * 
+     * 
+     * @param $level
+     * @param $message
+     */
+    function addInfoToFile($level, $message)
+    {
+        /*
+         * Создание файла
+         * $this->filename['filename'] - указывает путь к файлу
+         * a - только для записи.Записывает данные и ставит каретку в конце строки
+         */
+
         $handle = fopen($this->filename['filename'], 'a');
 
-        fwrite($handle, "\r\n".$this->date." ".$level." ".$message);
-        fclose($handle);
+
+        fwrite($handle, "\r\n".$this->date." ".$level." ".$message);//Запись
+        fclose($handle);//Закрываем файл (считаеся хорошим тоном)
     }
 
 
